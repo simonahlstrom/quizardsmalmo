@@ -1,0 +1,307 @@
+:root {
+  /* COLORS */
+  --black: rgba(20, 20, 20, 1);
+  --darkBlue: rgba(11, 49, 66, 1);
+  --darkBlueTP: rgba(11, 49, 66, .8);
+  --blue: rgba(11, 90, 119, 1);
+  --yellow: rgba(237, 188, 71, 1);
+  --white: rgba(247, 247, 247, 1);
+  
+  /* FONT SIZES */
+  --headerOne: 50px;
+  --headerTwo: 25px;
+  --bread: 14px;
+
+  /* FONTS */
+  --font: 'Roboto', sans-serif;
+  --harryPotter: "Harry P";
+  
+  /* MEASUREMENTS */
+  --headerHeight: 15vh;
+  --mainHeight: 85vh;
+  --mainWidth: 100vw;
+  --boxWidth: 60vw;
+
+  /* MISC */
+  --yellowBorder: 2px dashed var(--yellow);
+  --blueBorder: 2px dashed var(--darkBlue);
+  --buttonSize: 20px;
+}
+
+/* CLASSES *********************************************/
+
+.flexCenter {
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .flexColumn {
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.default {
+  display: block;
+}
+
+.flexBetween {
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.box {
+  width: var(--boxWidth);
+  border: var(--yellowBorder);
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 30px;
+}
+
+.buttonContainer {
+  display: -webkit-flex;
+  justify-content: space-evenly;
+  width: var(--boxWidth);
+  background-color: transparent;
+  width: calc(var(--boxWidth) + 60px);
+}
+
+/* .invertedColors {
+  background-color: var(--yellow);
+  color: var(--darkBlue);
+  border: var(--blueBorder);
+} */
+
+/* BODY/GENERAL ****************************************/
+
+body {
+  margin: 0px;
+  font-size: var(--bread);
+  color: var(--yellow);
+  font-family: var(--font);
+}
+
+h1 {
+  font-size: var(--headerOne);
+  font-family: var(--harryPotter);
+  text-shadow: 1px 1px 2px var(--blue);
+  text-align: center;
+}
+
+#headerHomepage {
+  font-size: var(--headerOne);
+  font-family: var(--harryPotter);
+  text-shadow: 1px 1px 2px var(--blue);
+  margin: 15vh 0vw 10vh;
+}
+
+h2 {
+  font-size: var(--headerTwo);
+  font-weight: initial;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-family: "Avenir Next Medium", sans-serif;
+}
+
+section {
+  height: var(--mainHeight);
+  width: var(--mainWidth);
+  display: none;
+}
+section * {
+  /* align-self: center; */
+  /* justify-self: center; */
+}
+
+section div {
+  background-color: var(--darkBlueTP);
+  margin: 10px auto;
+}
+
+section > div:last-child {
+  margin-bottom: 10vh;
+}
+
+/* HEADER **********************************************/
+
+header {
+height: var(--headerHeight);
+background-color: var(--darkBlue);
+font-family: var(--harryPotter);
+}
+
+#logo {
+  height: 80%;
+  margin-left: 20px;
+}
+
+#phone {
+  height: 70%;
+  margin-right: 20px;
+}
+
+nav {
+  width: 40vw;
+  margin-right: 40px;
+  font-size: var(--headerTwo);
+}
+
+nav div {
+  text-shadow: 0px 0px 0px var(--yellow);
+}
+
+img {
+  font-family: var(--bread);
+}
+
+#hamburger {
+  display: none;
+  height: 40px;
+  fill: var(--yellow);
+}
+
+#mobileMenu {
+  display: none;
+}
+
+#mobileMenu div {
+  background-color: var(--darkBlue);
+  padding: 5px 0px;
+  text-align: center;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+/* MAIN ************************************************/
+
+main {
+  background-image: url(images/landscape.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: var(--mainHeight);
+  overflow: scroll;
+}
+
+/* #mainWrapper {
+  overflow: scroll;
+  height: var(--mainHeight);
+} */
+
+/* #about, #gameDay, #story, #contact {
+  display: none;
+} */
+
+.display {
+  display: -webkit-flex;
+}
+
+/* SECTION: HOMEPAGE */
+
+#video {
+  text-align: center;
+  width: 40vw;
+  height: 30vh;
+}
+
+/* SECTION: ABOUT */
+
+.buttonContainer div {
+  border: var(--yellowBorder);
+  padding: 20px;
+  font-size: var(--buttonSize);
+  margin-top: 0px;
+}
+
+/* SECTION: GAME DAY */
+
+#mobileIG {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#IG {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* SECTION: STORY */
+
+/* SECTION: CONTACT */
+
+
+/* FOOTER **********************************************/
+
+footer div {
+  background-color: var(--blue);
+  height: 10vh;
+  width: var(--mainWidth);
+}
+
+/* HOVER & ANIMATION ***********************************/
+
+* {
+  transition: all .2s ease;
+}
+
+nav div:hover {
+  text-shadow: 1px 1px 2px var(--yellow);
+}
+
+#phone:hover {
+  text-shadow: 0px 0px 0px var(--yellow);
+}
+
+.buttonContainer > div:hover {
+  background-color: var(--yellow);
+  color: var(--darkBlue);
+  border: var(--blueBorder);
+}
+
+/* MEDIA QUERIES ****************************************/
+
+@media (max-width: 700px) {
+  nav {
+    justify-content: center;
+    width: auto;
+  } 
+
+  nav div {
+    display: none;
+  }
+
+  #hamburger {
+    display: -webkit-flex;
+  }
+
+  .buttonContainer {
+    display: block;
+  }
+
+  .buttonContainer div {
+    padding: 5px;
+    text-align: center;
+  }
+
+  #IG {
+    display: none;
+  }
+
+  #mobileIG {
+    display: block;
+    width: 90vw;
+    margin: 0px auto 10px;
+  }
+}
